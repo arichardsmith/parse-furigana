@@ -1,0 +1,21 @@
+{
+  "name": "@arichardsmith/parse-furigana",
+  "version": "0.0.1",
+  "description": "Parse bracket marked furigana strings",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Richard Smith",
+  "license": "MIT",
+  "files": [
+    "dist/**/*.*"
+  ],
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "typescript": "^3.3.1"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "mocha test/index.js"
+  }
+}
