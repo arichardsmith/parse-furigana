@@ -182,7 +182,7 @@ function buildRegExp(brackets: [string, string]) {
 }
 
 /**
- * Get's the last element in an array
+ * Gets the last element in an array
  * @param arr
  */
 function last<T>(arr: Array<T>): T {
@@ -231,7 +231,7 @@ function flattenPartialChunks(brackets: [string, string]) {
 
 const RESERVED_CHARS = '()[]\\/+{}*.'
 /**
- * Makes user define brackets regex safe
+ * Makes user defined brackets regex safe
  * @param char
  */
 function escapeBracket(char: string) {
