@@ -84,8 +84,8 @@ function findBestMatch(kana: string, hiragana: string) {
       if (!isKanji(nextChar)) {
         // If not, could it be a compound verb
         if (
-          !I_SOUNDS.includes(nextChar) ||
-          !remainingHiragana.includes(nextChar)
+          !includes(I_SOUNDS, nextChar) ||
+          !includes(remainingHiragana, nextChar)
         ) {
           // Must be end of squence
           break
@@ -229,15 +229,19 @@ function flattenPartialChunks(brackets: [string, string]) {
   }
 }
 
-const RESERVED_CHARS = '()[]\\/+{}*.'
+const RESERVED_CHARS = '()[]\\/+{}*.'.split('')
 /**
  * Makes user defined brackets regex safe
  * @param char
  */
 function escapeBracket(char: string) {
-  if (RESERVED_CHARS.includes(char)) {
+  if (includes(RESERVED_CHARS, char)) {
     return `\\${char}`
   }
 
   return char
+}
+
+function includes(array: Array<any>, val: any): boolean {
+  return array.indexOf(val) !== -1
 }
