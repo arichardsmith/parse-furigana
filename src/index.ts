@@ -132,7 +132,8 @@ function findBestMatch(kana: string, hiragana: string) {
   return outBuffer.reverse()
 }
 
-const I_SOUNDS = 'いきぎしじちぢみひびぴにり'.split('')
+// There is no compound verb matching the pattern ?に? so we don't have to worry about matching に
+const I_SOUNDS = 'いきぎしじちぢみひびぴり'.split('')
 
 const KANJI_START = 0x4e00
 const KANJI_END = 0x9faf

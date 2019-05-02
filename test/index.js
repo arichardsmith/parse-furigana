@@ -52,6 +52,11 @@ const TESTS = [
     name: 'text with other chars',
     test: '空に美しい>虹（にじ）<がかかった',
     expect: ['空に美しい>', ['虹', 'にじ'], '<がかかった']
+  },
+  {
+    name: 'two words with に',
+    test: '空に虹（にじ）がかかった',
+    expect: ['空に', ['虹', 'にじ'], 'がかかった']
   }
 ]
 
