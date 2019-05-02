@@ -174,7 +174,7 @@ function matchRange(start: number, end: number) {
  * @param brackets
  */
 function buildRegExp(brackets: [string, string]) {
-  const exp = `([${KANJI_RANGE}]+[${KANJI_RANGE}${HIRAGANA_RANGE}]+)${escapeBracket(
+  const exp = `([${KANJI_RANGE}]+[${KANJI_RANGE}${HIRAGANA_RANGE}]*)${escapeBracket(
     brackets[0]
   )}([${HIRAGANA_RANGE}]+)${escapeBracket(brackets[1])}`
 

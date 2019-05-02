@@ -28,6 +28,11 @@ const TESTS = [
     expect: [['食', 'た'], 'べる。', ['例', 'たと'], 'えば、テスト']
   },
   {
+    name: 'single kanji',
+    test: '虹（にじ）',
+    expect: [['虹', 'にじ']]
+  },
+  {
     name: 'partial furigana',
     test: '食べる（た）',
     expect: [['食', 'た'], 'べる']
@@ -42,6 +47,11 @@ const TESTS = [
     test: '食べる[たべる]',
     expect: [['食', 'た'], 'べる'],
     brackets: ['[', ']']
+  },
+  {
+    name: 'text with other chars',
+    test: '空に美しい>虹（にじ）<がかかった',
+    expect: ['空に美しい>', ['虹', 'にじ'], '<がかかった']
   }
 ]
 
