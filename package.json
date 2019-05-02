@@ -1,6 +1,6 @@
 {
   "name": "@arichardsmith/parse-furigana",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "Parse bracket marked furigana strings",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
